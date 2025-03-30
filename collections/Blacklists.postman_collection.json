@@ -1,14 +1,15 @@
 {
 	"info": {
-		"_postman_id": "088ee32b-9dc2-431b-8499-96ce97dc2ea3",
+		"_postman_id": "db3c88fb-7c2a-46bd-aad3-5a27d5ef6c6e",
 		"name": "Blacklists",
 		"description": "Esta colección contiene los endpoints relacionados con la gestión de la lista negra global de una organización. Los principales servicios incluidos permiten:\n\n1. **Inserción de un correo en la lista negra:** Facilita la inclusión de un email en la lista negra, especificando el motivo por el cual el correo debe ser bloqueado y el uuid de la app.\n    \n2. **Consulta de un correo en la lista negra:** Permite verificar si un email específico está en la lista negra global, retornando si esta y el motivo de su inclusión.\n    \n\nAmbos endpoints requieren la autenticación mediante Bearer Token para garantizar un acceso seguro a los servicios. Adicionalmente, las solicitudes están configuradas para utilizar la variable _**IP_ADDRESS**_, que debe adaptarse según la IP y el puerto donde se desplieguen los endpoints.\n\nLa colección cubre diferentes escenarios para asegurar el correcto funcionamiento de los servicios bajo diversas condiciones, tales como inserciones exitosas, validaciones de correos ya existentes, y otros casos de uso.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "21689315"
+		"_exporter_id": "12808771",
+		"_collection_link": "https://fotoalpes.postman.co/workspace/d8c5570f-565f-4147-bdff-610d93fbffed/collection/12808771-db3c88fb-7c2a-46bd-aad3-5a27d5ef6c6e?action=share&source=collection_link&creator=12808771"
 	},
 	"item": [
 		{
-			"name": "EP 1 - Casos de prueba",
+			"name": "Entrega Proyecto 1 - Casos de prueba 1",
 			"item": [
 				{
 					"name": "Crear usuario que está en lista negra sin email",
@@ -65,7 +66,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"email\": \"daniel@uniandes.edu.co\",\n    \"blocked_reason\": \"This user is PEP\"\n}",
+							"raw": "{\n    \"email\": \"jd.paezj1@uniandes.edu.co\",\n    \"blocked_reason\": \"This user is PEP\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -103,7 +104,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"email\": \"juan@uniandes.edu.co\",\n    \"app_uuid\": \"08\",\n    \"blocked_reason\": \"This user is PEP\"\n}",
+							"raw": "{\n    \"email\": \"p.diazp@uniandes.edu.co\",\n    \"app_uuid\": \"08\",\n    \"blocked_reason\": \"This user is PEP\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -141,7 +142,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"email\": \"juan@uniandes.edu.co\",\n    \"app_uuid\": \"08043ed9-6823-426b-9900-e431e1d744f8\",\n    \"blocked_reason\": \"Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas Letraset, las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.\"\n}",
+							"raw": "{\n    \"email\": \"p.diazp@uniandes.edu.co\",\n    \"app_uuid\": \"08043ed9-6823-426b-9900-e431e1d744f8\",\n    \"blocked_reason\": \"Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas Letraset, las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -186,7 +187,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"email\": \"laura@uniandes.edu.co\",\n    \"app_uuid\": \"08043ed9-6823-426b-9900-e431e1d744f8\",\n    \"blocked_reason\": \"This user is PEP\"\n}",
+							"raw": "{\n    \"email\": \"p.diazp@uniandes.edu.co\",\n    \"app_uuid\": \"08043ed9-6823-426b-9900-e431e1d744f8\",\n    \"blocked_reason\": \"This user is PEP\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -208,10 +209,10 @@
 					"response": []
 				}
 			],
-			"description": "Este folder contiene múltiples llamadas al endpoint que permite agregar un email a lista negra global de la organización. El endpoint recibe tres parámetros de entrada correspondientes al email, uuid y la razón de bloqueo del usuario, y responde un objeto que tiene la info del usuario agregado a la lista negra y un mensaje de comprobación. Para ejecutar estas solicitudes, es necesario un Bearer Token que autoriza el acceso a la API.\n\nSe han configurado varios escenarios para validar el comportamiento del endpoint bajo diferentes condiciones, incluyendo casos de fallo y casos de éxito . Además, la colección incluye una variable llamada **IP_ADDRESS**, que debe ser configurada dependiendo de la IP y puerto en la que sea desplegado el endpoint."
+			"description": "Esta colección agrupa los endpoints dedicados a la administración de la lista negra global de una organización. Los principales servicios disponibles incluyen:\n\n1. **Agregar un correo a la lista negra:** Permite registrar un email en la lista negra, especificando la razón del bloqueo y el identificador único de la aplicación asociada.\n    \n2. **Verificar un correo en la lista negra:** Facilita la consulta de un email en la lista negra global, devolviendo su estado y el motivo de su inclusión en caso de estar registrado.\n    \n\nTodos los endpoints requieren autenticación mediante **Bearer Token** para garantizar un acceso seguro. Además, las solicitudes utilizan la variable _**IP_ADDRESS**_, que debe ajustarse según la dirección IP y el puerto donde estén desplegados los servicios.\n\nLa colección contempla múltiples escenarios para evaluar el correcto funcionamiento de los servicios, incluyendo inserciones exitosas, validaciones de correos previamente registrados y otros casos de uso relevantes."
 		},
 		{
-			"name": "EP 2 - Casos de prueba",
+			"name": "Entrega Proyecto 1 - Casos de prueba 2",
 			"item": [
 				{
 					"name": "Usuario que no se encuentra en la lista negra",
@@ -221,7 +222,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "uniandes-2024",
+									"value": "token-misw4304-2025",
 									"type": "string"
 								}
 							]
@@ -274,7 +275,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"email\": \"juan@uniandes.edu.co\",\n    \"app_uuid\": \"08043ed9-6823-426b-9900-e431e1d744f8\",\n    \"blocked_reason\": \"This user is PEP\"\n}",
+							"raw": "{\n    \"email\": \"p.diazp@uniandes.edu.co\",\n    \"app_uuid\": \"08043ed9-6823-426b-9900-e431e1d744f8\",\n    \"blocked_reason\": \"This user is PEP\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -318,14 +319,14 @@
 							}
 						],
 						"url": {
-							"raw": "http://{{IP_ADDRESS}}/blacklists/juan@uniandes.edu.co",
+							"raw": "http://{{IP_ADDRESS}}/blacklists/p.diazp@uniandes.edu.co",
 							"protocol": "http",
 							"host": [
 								"{{IP_ADDRESS}}"
 							],
 							"path": [
 								"blacklists",
-								"juan@uniandes.edu.co"
+								"p.diazp@uniandes.edu.co"
 							]
 						},
 						"description": "La función de este endpoint es validar si un correo electrónico está en la lista negra global de la organización. Recibe como parametro de entrada el correo electrónico y, en caso de que el correo haya sido previamente insertado en la lista negra, se retornará un código 200 junto con un booleano `true` y el motivo de la inserción. Es importante que la validación se realice con un correo que haya sido previamente insertado en la lista negra.\n\n**Autenticación:** Este endpoint requiere un Bearer Token para poder realizar la validación de manera segura."
@@ -333,7 +334,7 @@
 					"response": []
 				}
 			],
-			"description": "Este folder contiene múltiples llamadas al endpoint que permite verificar si un email está en la lista negra global de la organización. El endpoint responde con un booleano que indica si el correo está o no en la lista negra, junto con el motivo de su inclusión en caso afirmativo. Para ejecutar estas solicitudes, es necesario un Bearer Token que autoriza el acceso a la API.\n\nSe han configurado varios escenarios para validar el comportamiento del endpoint bajo diferentes condiciones, incluyendo casos de éxito, fallos de autenticación, y respuestas cuando el email no está en la lista negra. Además, la colección incluye una variable llamada **IP_ADDRESS**, que debe ser configurada dependiendo de la IP y puerto en la que sea desplegado el endpoint."
+			"description": "Este folder contiene múltiples solicitudes al endpoint encargado de verificar si un email está registrado en la lista negra global de la organización. La respuesta del endpoint incluye un valor booleano que indica si el correo se encuentra en la lista negra, así como la razón de su inclusión en caso afirmativo.\n\nPara ejecutar estas solicitudes, es necesario proporcionar un **Bearer Token**, el cual autoriza el acceso a la API.\n\nSe han definido diversos escenarios para evaluar el comportamiento del endpoint bajo diferentes condiciones, tales como consultas exitosas, errores por falta de autenticación y respuestas cuando el email no está en la lista negra.\n\nAdemás, la colección incluye una variable denominada _**IP_ADDRESS**_, que debe configurarse según la IP y el puerto donde se encuentre desplegado el servicio."
 		}
 	],
 	"event": [
@@ -361,7 +362,7 @@
 	"variable": [
 		{
 			"key": "IP_ADDRESS",
-			"value": "beanstalk-blacklists.eba-pxp33nh2.us-east-1.elasticbeanstalk.com",
+			"value": "url.beanstalk",
 			"type": "string"
 		}
 	]
