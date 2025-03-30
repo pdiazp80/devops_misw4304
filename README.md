@@ -15,7 +15,7 @@
 
 Para correr el microservicio "Blacklist" de forma remota se utiliza los servicios de AWS: ECR, RDS, EC2, ECS, CodeBuild, CodeDeploy y CodePipeline permitiendo que este sea accedido por medio de la url:
 
-- [load-balancer-2102978182.us-east-1.elb.amazonaws.com](load-balancer-2102978182.us-east-1.elb.amazonaws.com)
+- [us-east-1.elb.amazonaws.com](url)
 
 ### Despliegue de forma manual
 
@@ -34,7 +34,7 @@ Una vez ejecutado la serie de pasos anterior se tiene disponible el API en la si
 
 En el siguiente enlace encontrará la documentación de la API construida para el microservicio Blacklist con la herramienta de POSTMAN:
 
-- [Documentación Blacklist](https://documenter.getpostman.com/view/21689315/2sAXxTdBYh)
+- [Documentación Blacklist](https://url)
 
 ## Pruebas
 
@@ -56,14 +56,3 @@ En el siguiente enlace encontrará el video donde se explica y sustenta lo reali
 
 - [Video entrega 1](https://uniandes-my.sharepoint.com/:v:/g/personal/j_padilla_uniandes_edu_co/EQHt8U9MWc1Llw3dnPQICkgBzzYvLugPOEQtyAY-dGPkGQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=ZbFJ0F)
 
-En el siguiente enlace encontrará el video donde se explica y sustenta lo realizado en la entrega 2:
-
-- [Video entrega 2](https://uniandes-my.sharepoint.com/:v:/g/personal/j_padilla_uniandes_edu_co/Ee9Faxzdh9RNvTqQ4pKuufQBbEPkQ4vOTMLaHz6EZW0Pag?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=9mqaSP)
-
-En el siguiente enlace encontrará el video donde se explica y sustenta lo realizado en la entrega 3:
-
-- [Video entrega 3](https://uniandes-my.sharepoint.com/:v:/g/personal/j_padilla_uniandes_edu_co/EeoOu0oNIP5NqjdoQlQCfGYBF9kB7lKBxlrN3a04Ann9YQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=qDs7vD)
-
-En el siguiente enlace encontrará el video donde se explica y sustenta lo realizado en la entrega 4:
-
-- [Video entrega 4](https://uniandes-my.sharepoint.com/:v:/g/personal/j_padilla_uniandes_edu_co/ERIwn3ov729KsqSBfoehxhkBhw58DkjeoJ2JtIiiEHUWUA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=WUiNYW)
