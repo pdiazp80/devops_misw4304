@@ -1,0 +1,53 @@
+# docker-compose.yml para la aplicación con New Relic y PostgreSQL.
+# Define un entorno de contenedores con una base de datos PostgreSQL
+# y una aplicación Flask instrumentada con New Relic.
+
+name: newrelic
+
+services:
+  newrelicDB:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: miso      # Usuario de la base de datos
+      POSTGRES_PASSWORD: miso  # Contraseña del usuario de la base de datos
+      POSTGRES_DB: miso        # Nombre de la base de datos a crear
+    
+    ports:
+      - "8000:5432"  # Mapea el puerto 5432 de PostgreSQL al puerto 8000 en el host
+    networks:
+      - newrelic-network  # Conecta el servicio a la red 'newrelic-network'
+    
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]  # Verifica si la base de datos está lista
+      interval: 5s   # Intervalo entre verificaciones
+      timeout: 5s    # Tiempo máximo de espera para la respuesta
+      retries: 5     # Número de intentos antes de considerar la base de datos como inactiva
+
+  newrelic:
+    build:
+      context: ./  # Usa el Dockerfile ubicado en el mismo directorio
+      dockerfile: Dockerfile  # Especifica el Dockerfile a usar
+    environment:
+      - NEW_RELIC_LICENSE_KEY=fd72bb44e6de4983042a60f5c04613ecFFFFNRAL  # Clave de licencia de New Relic
+      - NEW_RELIC_APP_NAME=python_flask  # Nombre de la aplicación en New Relic
+      - DB_USER=miso        # Usuario de la base de datos
+      - DB_PASSWORD=miso    # Contraseña de la base de datos
+      - DB_HOST=newrelicDB  # Nombre del servicio de la base de datos
+      - DB_PORT=5432        # Puerto en el que escucha PostgreSQL
+      - DB_NAME=miso        # Nombre de la base de datos
+      - TOKEN=token         # Token de autenticación para la aplicación
+      - ENV=development     # Entorno de ejecución de la aplicación
+    
+    ports:
+      - 3000:3000  # Expone la aplicación en el puerto 3000
+    networks:
+      - newrelic-network  # Conecta el servicio a la red 'newrelic-network'
+    
+    depends_on:
+      newrelicDB:
+        condition: service_healthy  # Espera a que la base de datos esté lista antes de iniciar
+
+# Define una red bridge para la comunicación entre contenedores
+networks:
+  newrelic-network:
+    driver: bridge
