@@ -1,6 +1,6 @@
 # DevOps: Agilizando el Despliegue Continuo de Aplicaciones
 
-## Integrantes Curso DevOps misw4304
+## Integrantes Curso DevOps misw4304  
 
 |Nombre                        |Correo electrónico                          |
 |------------------------------|---------------------------------|
