@@ -53,16 +53,12 @@ Una vez ejecutado el paso anterior se tiene el reporto de las pruebas ejecutadas
 
 ## Referencias
 
+[1] [AWS Elastic Beanstalk](https://aws.amazon.com/es/elasticbeanstalk/)  
+[2] [Documentación AWS Elastic Beanstalk](https://docs.aws.amazon.com/es_es/elastic-beanstalk/index.html)  
+[3] [Documentación AWS Elastic Beanstalk: Flask](https://docs.aws.amazon.com/es_es/elasticbeanstalk/latest/dg/create-deploy-python-flask.html)  
+[4] [AWS Elastic Beanstalk: Configuration Files](https://medium.com/@luisacarrion/getting-to-know-and-love-aws-elastic-beanstalk-configuration-files-ebextensions-9a4502a26e3c)  
+[5] [AWS Elastic Beanstalk: Creating Environments (Instance Profile)](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.environments.html)  
 
-[1] AWS Elastic Beanstalk
-https://aws.amazon.com/es/elasticbeanstalk/
-[2] Documentación AWS Elastic Beanstalk
-https://docs.aws.amazon.com/es_es/elastic-beanstalk/index.html
-[3] Documentación AWS Elastic Beanstalk: Flask https://docs.aws.amazon.com/es_es/elasticbeanstalk/latest/dg/create-deploy-python-flask.html
-[4] AWS Elastic Beanstalk: Configuration Files
-https://medium.com/@luisacarrion/getting-to-know-and-love-aws-elastic-beanstalk-configuration-files-ebextensions-9a4502a26e3c
-[5] AWS Elastic Beanstalk: Creating Environments (Instance Profile)
-https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.environments.html
 
 ## Video explicación entrega
 
